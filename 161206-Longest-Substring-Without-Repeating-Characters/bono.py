@@ -10,10 +10,8 @@ class Solution(object):
         po_dict = {}
         
         for i, c in enumerate(s):
-            if c in po_dict.keys() and po_dict[c] >= start:
-                
-                max_len = max(max_len, leng)
-                
+            if c in po_dict.keys() and po_dict[c] >= start:                
+                max_len = max(max_len, leng)   
                 start = po_dict[c] + 1
                 leng = i - start + 1
                 po_dict[c] = i
